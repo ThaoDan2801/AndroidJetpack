@@ -19,4 +19,20 @@
         android:layout_marginTop="20dp"
         android:background="@color/teal_700" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_toast_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:layout_centerHorizontal="true"
+        android:text="show Toast" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_below="@id/btn_toast_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_activty"
+        android:layout_centerHorizontal="true"
+        android:text="start activity" />
+
 </RelativeLayout>
