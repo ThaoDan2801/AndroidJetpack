@@ -43,7 +43,8 @@ class DataViewModel : ViewModel() {
     }
 
     fun showToast(){
-        _showToast.postValue(Event(true))
+        _showToast.value = Event((true))// run immediately => chay ngay lap tuc
+        _showToast.postValue(Event(true))// => handle.post // chay sau 1 chut, nhung khong anh huong den performance
 //        _showToast.postValue(false)
     }
     fun startActivity(){

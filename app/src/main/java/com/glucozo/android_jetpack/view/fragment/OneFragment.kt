@@ -33,9 +33,13 @@ class OneFragment : Fragment() {
         binding = FragmentDataBinding.inflate(inflater, container, false)
 //        viewModel = ViewModelProvider(this)[DataViewModel::class.java]
         viewModel = ViewModelProvider(requireActivity())[DataViewModel::class.java]
-        viewModel.number.observe(viewLifecycleOwner) {
-            binding.tvValue.text = it.toString()
-        }
+        binding.vm = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
+
+//        viewModel.number.observe(viewLifecycleOwner) {
+//            binding.tvValue.text = it.toString()
+//        }
         viewModel.startActivity.observe(viewLifecycleOwner) {
             if (it) {
                 val intent = Intent(requireContext(), MainActivity::class.java)
@@ -54,9 +58,9 @@ class OneFragment : Fragment() {
 //            }
 //        }
 
-        binding.btn.setOnClickListener {
-            viewModel.updateNumber()
-        }
+//        binding.btn.setOnClickListener {
+//            viewModel.updateNumber()
+//        }
 
         binding.startActivty.setOnClickListener {
             viewModel.startActivity()
