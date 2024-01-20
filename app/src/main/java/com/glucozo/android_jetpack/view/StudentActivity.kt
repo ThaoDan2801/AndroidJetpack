@@ -1,4 +1,4 @@
-package com.glucozo.android_jetpack
+package com.glucozo.android_jetpack.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
