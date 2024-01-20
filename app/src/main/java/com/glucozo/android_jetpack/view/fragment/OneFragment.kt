@@ -48,9 +48,12 @@ class OneFragment : Fragment() {
         }
 
         viewModel.showToast.observe(viewLifecycleOwner) {
-            it.getContentIfNotHandled()?.let {
-                Toast.makeText(requireContext(), "toast context", Toast.LENGTH_LONG).show()
-            }
+//            it.getContentIfNotHandled()?.let {
+//                Toast.makeText(requireContext(), "toast context", Toast.LENGTH_LONG).show()
+//            }
+
+            viewModel.getText()
+
         }
 //        lifecycleScope.launch {
 //            viewModel.toastChannel.collectLatest {
@@ -58,9 +61,9 @@ class OneFragment : Fragment() {
 //            }
 //        }
 
-//        binding.btn.setOnClickListener {
-//            viewModel.updateNumber()
-//        }
+        binding.btn.setOnClickListener {
+            viewModel.updateNumber()
+        }
 
         binding.startActivty.setOnClickListener {
             viewModel.startActivity()

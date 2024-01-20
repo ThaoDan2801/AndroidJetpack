@@ -1,5 +1,6 @@
 package com.glucozo.android_jetpack.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -34,12 +35,18 @@ class DataViewModel : ViewModel() {
 //    val startActivity : LiveData<Boolean>
         get() = _startActivity
 
+    val message = MutableLiveData<String>()
+
 
     private val _toastChannel = Channel<Boolean> {  }//onetime event co san cua kotlin
     val toastChannel = _toastChannel.receiveAsFlow()
 
     fun updateNumber(){
         _number.value = _number.value!!.plus(1)
+    }
+
+    fun getText(){
+        Log.d("thaont", "current message ${message.value}")
     }
 
     fun showToast(){
