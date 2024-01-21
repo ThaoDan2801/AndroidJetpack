@@ -31,14 +31,13 @@ class StudentDiff(
                 && oldStudent[oldItemPosition].name == newStudent[newItemPosition].name
                 && oldStudent[oldItemPosition].age == newStudent[newItemPosition].age
                 && oldStudent[oldItemPosition].avatar == newStudent[newItemPosition].avatar
-
     }
 
 }
 
 
 class StudentAdapter(
-    val callback: StudentClick
+    private val callback: StudentClick
 
 ) : RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
     private val students = arrayListOf<Student>()
@@ -75,7 +74,7 @@ class StudentAdapter(
         students[position].let {
             holder.bind(it)
         }
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             callback.onClick(students[position])
         }
     }
