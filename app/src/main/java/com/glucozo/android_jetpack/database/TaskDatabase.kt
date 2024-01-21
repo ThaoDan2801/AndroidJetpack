@@ -10,23 +10,23 @@ import com.glucozo.android_jetpack.model.Task
 abstract class TaskDatabase : RoomDatabase(){
     abstract fun getTaskDao():TaskDao
 
-    companion object {  // singleton pattern
-        private var instance : TaskDatabase? = null
-
-        @Synchronized
-        fun getInstance(ctx: Context):TaskDatabase{
-            if (instance == null){
-                //builder pattern
-                instance = Room.databaseBuilder(
-                    ctx.applicationContext,
-                    TaskDatabase::class.java,
-                    "task.db"
-                )
-//                    .allowMainThreadQueries() //only for tetting, remove on production
-                    .fallbackToDestructiveMigration()
-                    .build()
-            }
-            return instance!!
-        }
-    }
+//    companion object {  // singleton pattern
+//        private var instance : TaskDatabase? = null
+//
+//        @Synchronized
+//        fun getInstance(ctx: Context):TaskDatabase{
+//            if (instance == null){
+//                //builder pattern
+//                instance = Room.databaseBuilder(
+//                    ctx.applicationContext,
+//                    TaskDatabase::class.java,
+//                    "task.db"
+//                )
+////                    .allowMainThreadQueries() //only for tetting, remove on production
+//                    .fallbackToDestructiveMigration()
+//                    .build()
+//            }
+//            return instance!!
+//        }
+//    }
 }
