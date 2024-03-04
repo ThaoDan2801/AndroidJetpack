@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".view.TestAnimationActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ani"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bg_btn_lucky_money"
+        android:layout_height="wrap_content"
+        android:text="click" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_say_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_y="50dp"
+        android:text="Xin Chào"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_y="100dp"
+        android:hint="@string/feelings">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            tools:text="Happy" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_stk"
+        android:layout_width="match_parent"
+        android:hint="Nhập số tài khoản"
+        android:layout_height="wrap_content"
+        android:layout_y="200dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/no_accept"
+        android:layout_width="wrap_content"
+        android:background="@color/yellow"
+        android:layout_y="300dp"
+        android:textColor="@color/red"
+        android:layout_x="150dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:paddingHorizontal="8dp"
+        android:text="Dỗi không nhận nữa"
+        android:layout_height="wrap_content"/>
+
+</AbsoluteLayout>

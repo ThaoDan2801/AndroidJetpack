@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_view"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="#B80000" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="#B80000" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="#B80000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

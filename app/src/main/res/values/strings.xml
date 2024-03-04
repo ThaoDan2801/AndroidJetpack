@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Android-Jetpack</string>
+    <string name="feelings">Chọn ngân hàng</string>
+    <string name="lucky_money">Nhận lì xì</string>
+    <string name="hind_edit_input_name">Nhập tên của bạn</string>
+    <string name="next_to">Tiếp tục</string>
+
+    <string-array name="feelings">
+        <item>Sad</item>
+        <item>Dissatisfied</item>
+        <item>Satisfied</item>
+        <item>Happy</item>
+        <item>Excited</item>
+    </string-array>
+
 </resources>
