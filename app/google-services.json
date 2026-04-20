@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "547398024329",
+    "project_id": "android-jetpack-e2eed",
+    "storage_bucket": "android-jetpack-e2eed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547398024329:android:5fcb78679d83575a295a58",
+        "android_client_info": {
+          "package_name": "com.glucozo.android_jetpack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZkzpEt6iMAo09jYJfsvh2Qzw36ON-qjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

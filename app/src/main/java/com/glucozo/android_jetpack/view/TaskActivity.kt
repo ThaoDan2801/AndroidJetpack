@@ -2,6 +2,8 @@ package com.glucozo.android_jetpack.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AbsoluteLayout
+import android.widget.RelativeLayout
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,6 +11,7 @@ import com.glucozo.android_jetpack.databinding.ActivityTaskBinding
 import com.glucozo.android_jetpack.model.Task
 import com.glucozo.android_jetpack.view.adapter.TaskAdapter
 import com.glucozo.android_jetpack.viewmodel.TaskViewModel
+import java.util.Random
 
 class TaskActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTaskBinding
@@ -47,5 +50,8 @@ class TaskActivity : AppCompatActivity() {
         viewModel.tasks.observe(this) {
             taskAdapter.submitList(it)
         }
+
+        val params = binding.btnAdd.layoutParams as RelativeLayout
+//        params.x = Random().nextInt(width - widthButton)
     }
 }

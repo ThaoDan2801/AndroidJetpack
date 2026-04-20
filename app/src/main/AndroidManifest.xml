@@ -16,7 +16,34 @@
         android:theme="@style/Theme.AndroidJetpack"
         tools:targetApi="31">
         <activity
+            android:name=".view.Test2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Test1Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.TestOnActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".login_google.HomeActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.TestAnimationActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".view.TaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.StudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ShareVMActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,17 +52,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.TaskActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".view.StudentActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".view.ShareVMActivity"
+            android:name=".view.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".view.MainActivity"
-            android:exported="true">
+            android:name=".login_email.view.SignUpActivity"
+            android:exported="false" >
+
+        </activity>
+        <activity
+            android:name=".login_email.view.SignInActivity"
+            android:exported="true" >
 
         </activity>
     </application>

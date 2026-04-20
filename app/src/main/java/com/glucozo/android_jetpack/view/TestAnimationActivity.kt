@@ -9,6 +9,7 @@ import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.text.InputType
+import android.util.Log
 import android.view.animation.LinearInterpolator
 import android.widget.AbsoluteLayout
 import android.widget.ArrayAdapter
@@ -39,7 +40,7 @@ class TestAnimationActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        showDialogInputName()
+//        showDialogInputName()
         anyLocation()
 
     }
@@ -136,6 +137,11 @@ class TestAnimationActivity : AppCompatActivity() {
                 val params = binding.btnAni.layoutParams as AbsoluteLayout.LayoutParams
                 params.x = Random().nextInt(width - widthButton)
                 params.y = Random().nextInt(height - heightButton)
+
+//                params.x = 200
+//                params.y = 554
+//                Log.d("TAG", "anyLocation: X: ${params.x} ----- Y: ${params.y}")
+//                Log.d("TAG", "anyLocation: w: ${widthButton} ----- h: ${heightButton}")
                 binding.btnAni.layoutParams = params
             }
         }

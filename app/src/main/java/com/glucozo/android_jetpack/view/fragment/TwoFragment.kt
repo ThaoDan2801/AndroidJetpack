@@ -19,8 +19,10 @@ class TwoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDataBinding.inflate(inflater, container, false)
-//        viewModel = ViewModelProvider(this)[DataViewModel::class.java]
-        viewModel = ViewModelProvider(requireActivity())[DataViewModel::class.java]
+        viewModel = ViewModelProvider(this)[DataViewModel::class.java]
+//        viewModel = ViewModelProvider(requireActivity())[DataViewModel::class.java]
+//        binding.vm = viewModel
+//        binding.lifecycleOwner = viewLifecycleOwner
         viewModel.number.observe(viewLifecycleOwner){
             binding.tvValue.text = it.toString()
         }
